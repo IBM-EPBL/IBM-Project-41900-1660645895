@@ -68,7 +68,7 @@
             >
               <label for="sop" class="col-sm-8">SOP(0 to 5)</label>
               <input
-                type="range"
+                type="text"
                 name="sop"
                 placeholder="SOP"
                 list="tickmarks"
@@ -77,19 +77,11 @@
                 required
               />
 
-              <datalist name="sop" id="tickmarks">
-                <option value="0"></option>
-                <option value="1"></option>
-                <option value="2"></option>
-                <option value="3"></option>
-                <option value="4"></option>
-                <option value="5"></option>
-              </datalist>
             </div>
             <div class="form-group Spacing col-sm-6 justify-content-center">
               <label for="lor" class="col-sm-8">LOR(0 to 5)</label>
               <input
-                type="range"
+                type="text"
                 name="lor"
                 placeholder="LOR"
                 min="0"
@@ -97,14 +89,7 @@
                 list="lortick"
                 required
               />
-              <datalist name="lor" id="lortick">
-                <option value="0"></option>
-                <option value="1"></option>
-                <option value="2"></option>
-                <option value="3"></option>
-                <option value="4"></option>
-                <option value="5"></option>
-              </datalist>
+              
             </div>
           </div>
           <div class="form-group Spacing">
@@ -143,9 +128,9 @@
             No
           </div>
           <div class="form-group Spacing mt-5">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-danger">Submit</button>
             <a href="/"
-              ><button type="button" class="btn btn-secondary">Back</button></a
+              ><button type="button" class="btn btn-success">Back</button></a
             >
           </div>
         </form>
