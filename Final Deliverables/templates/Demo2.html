@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <title>University Admit Eligibility Predictor</title>
+  </head>
+  <body class="justify-content-center">
+    <br /><br />
+    <center>
+      <div class="col-sm-10" style="width: 80%">
+        <form method="post" action="/predict" class="form">
+          <div class="form-group Spacing">
+            <label for="greScore" class="col-sm-3"
+              >GRE Score(250 to 340)
+            </label>
+            <input
+              type="number"
+              name="greScore"
+              placeholder="GRE Score"
+              class="form-control col-sm-8"
+              min="250"
+              max="340"
+              required
+            />
+          </div>
+          <div class="form-group Spacing">
+            <label for="toeflScore" class="col-sm-3"
+              >TOEFL Score(50 to 120)</label
+            >
+            <input
+              type="number"
+              name="toeflScore"
+              placeholder="TOEFL Score"
+              class="form-control col-sm-8"
+              min="50"
+              max="120"
+              required
+              width="10px"
+            />
+          </div>
+          <div class="form-group Spacing">
+            <label for="univRank" class="col-sm-3"
+              >University Rating(1 to 5)</label
+            >
+            <input
+              type="number"
+              name="univRank"
+              placeholder="University Rating"
+              class="form-control col-sm-8"
+              min="1"
+              max="5"
+              required
+            />
+          </div>
+          <div class="d-flex">
+            <div
+              class="form-group Spacing col-sm-6 justify-content-center d-flex"
+            >
+              <label for="sop" class="col-sm-8">SOP(0 to 5)</label>
+              <input
+                type="range"
+                name="sop"
+                placeholder="SOP"
+                list="tickmarks"
+                min="0"
+                max="5"
+                required
+              />
+
+              <datalist name="sop" id="tickmarks">
+                <option value="0"></option>
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+              </datalist>
+            </div>
+            <div class="form-group Spacing col-sm-6 justify-content-center">
+              <label for="lor" class="col-sm-8">LOR(0 to 5)</label>
+              <input
+                type="range"
+                name="lor"
+                placeholder="LOR"
+                min="0"
+                max="5"
+                list="lortick"
+                required
+              />
+              <datalist name="lor" id="lortick">
+                <option value="0"></option>
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+              </datalist>
+            </div>
+          </div>
+          <div class="form-group Spacing">
+            <label for="cgpa" class="col-sm-3">CGPA(5 to 10)</label>
+            <input
+              type="number"
+              name="cgpa"
+              placeholder="CGPA"
+              class="form-control col-sm-8"
+              min="5"
+              max="10"
+              required
+            />
+          </div>
+          <div class="form-group Spacing">
+            <label for="research" class="col-sm-3 p-3"
+              >Research Experience</label
+            ><br />
+            <input
+              class="p-2"
+              type="radio"
+              name="research"
+              placeholder="Research"
+              value="1"
+              required
+            />
+            Yes &nbsp;&nbsp;
+            <input
+              class="p-2"
+              type="radio"
+              name="research"
+              placeholder="Research"
+              value="0"
+              required
+            />
+            No
+          </div>
+          <div class="form-group Spacing mt-5">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/"
+              ><button type="button" class="btn btn-secondary">Back</button></a
+            >
+          </div>
+        </form>
+      </div>
+    </center>
+    <br /><br />
+  </body>
+</html>
