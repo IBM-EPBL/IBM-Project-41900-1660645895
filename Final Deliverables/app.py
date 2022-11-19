@@ -29,7 +29,8 @@ def predict():
     array_of_input_fields = ['greScore', 'toeflScore', 'univRank', 'sop', 'lor', 'cgpa', 'research']
     array_of_values_to_be_scored = [greScore, toeflScore, univRank, sop, lor, cgpa, research]
     payload_scoring = {"input_data": [{"field": [array_of_input_fields], "values": [array_of_values_to_be_scored]}]}
-    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/5795f5cf-7316-450f-9d9c-f4e025e50210/predictions?version=2022-11-18', json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
+    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/5795f5cf-7316-450f-9d9c-f4e025e50210/predictions?version=2022-11-18', 
+    json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
     predictions = response_scoring.json()
     prediction = predictions['predictions'][0]['values'][0][0]
     
